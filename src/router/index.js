@@ -4,6 +4,12 @@ import Login from '@/components/Login'
 import Register from '@/components/Register'
 import index from '@/components/index'
 import CreateOrder from '@/components/order/CreateOrder'
+import QueryOrder from '@/components/order/QueryOrder'
+import UserDashboard from '@/components/user/UserDashboard'
+import DepartingTrunks from '@/components/carrier/DepartingTrunks'
+import DepartedTrunks from '@/components/carrier/DepartedTrunks'
+import HistoryTrunks from '@/components/carrier/HistoryTrunks'
+import CarrierDashboard from '@/components/carrier/CarrierDashboard'
 
 Vue.use(Router)
 
@@ -27,7 +33,37 @@ export default new Router({
     {
       path: '/order/createOrder',
       name: 'createOrder',
-      component: CreateOrder
+      component: CreateOrder,
+    },
+    {
+      path: '/order/queryOrder',
+      name: 'queryOrder',
+      component: QueryOrder
+    },
+    {
+      path: '/user/dashboard',
+      name:  'userDashboard',
+      component: UserDashboard
+    },
+    {
+      path: '/carrier/departingTrunks',
+      name: 'departingTrunks',
+      component: DepartingTrunks
+    },
+    {
+      path: '/carrier/departedTrunks',
+      name: 'departedTrunks',
+      component: DepartedTrunks
+    },
+    {
+      path: '/carrier/historyTrunks',
+      name: 'historyTrunks',
+      component: HistoryTrunks
+    },
+    {
+      path: '/carrier/dashboard',
+      name: 'carrierDashboard',
+      component: CarrierDashboard,
     }
   ]
 })
